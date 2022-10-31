@@ -1,0 +1,64 @@
+body {
+	min-height: 100vh;
+}
+
+nav {
+	display: flex;
+	padding: 10px;
+	justify-content: center;
+	gap: 10px;
+	align-items: center;
+
+	> img {
+		width: 150px;
+		height: 50px;
+	}
+}
+
+div.box-event {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	gap: 10px;
+	border: 1px solid #cfcfcf;
+	border-radius: 3px;
+
+	> * {
+		padding: 0 10px;
+	}
+
+	> img {
+		border-radius: 3px;
+		padding-top: 10px;
+	}
+
+	> .event-detail {
+		> span {
+			color: #454545;
+		}
+	}
+
+	> footer {
+		display: flex;
+		gap: 5px;
+		padding: 10px;
+		background: #cfcfcf;
+	}
+}
+
+article#main {
+	> .box-container {
+		width: 50%;
+		margin: auto;
+	}
+}
+
+@mixin span-cicon-basic($color) {
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background: #{$color};
+	display: inline-block;
+}
+span.icon-featured { @include span-cicon-basic(#2c8bb1); }
+span.icon-promoted { @include span-cicon-basic(#81b12c); }
