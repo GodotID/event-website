@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      - run: node build.js
+      - run: node public/build.js
       - uses: BogDAAAMN/deta-deploy-action@v1.0.1
         with:
           deta-access-token: ${{ secrets.DETA_TOKEN }}
